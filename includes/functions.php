@@ -1,6 +1,6 @@
 <?php
 /**
- * AALMAS - Global Utility Functions
+ * Muayyan - Global Utility Functions
  */
 require_once __DIR__ . '/../config/config.php';
 

@@ -1,5 +1,5 @@
 /**
- * AALMAS - Core JavaScript
+ * Muayyan - Core JavaScript
  */
 
 // Sidebar Toggle
@@ -39,7 +39,7 @@ function markAllRead() {
 
 // Get base URL
 function getBaseUrl() {
-    return '/AALMAS';
+    return '/Muayyan';
 }
 
 // Animated Counter
@@ -129,7 +129,7 @@ function printReport(elementId) {
     if (!content) return;
     const win = window.open('', '_blank');
     win.document.write(`
-        <html><head><title>AALMAS Report</title>
+        <html><head><title>Muayyan Report</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>body{padding:20px;font-family:Inter,sans-serif} @media print{.no-print{display:none}}</style>
         </head><body>${content.innerHTML}

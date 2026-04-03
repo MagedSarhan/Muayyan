@@ -1,5 +1,5 @@
 <?php
-/** AALMAS - Faculty Workload/Assessment Density */
+/** Muayyan - Faculty Workload/Assessment Density */
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireRole('faculty');

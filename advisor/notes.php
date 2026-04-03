@@ -1,5 +1,5 @@
 <?php
-/** AALMAS - Advisor Academic Notes */
+/** Muayyan - Advisor Academic Notes */
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireRole('advisor');

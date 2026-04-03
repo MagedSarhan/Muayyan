@@ -1,6 +1,6 @@
 <?php
 /**
- * AALMAS - Top Navigation Bar
+ * Muayyan - Top Navigation Bar
  */
 $notifications = getRecentNotifications($_SESSION['user_id'] ?? 0, 5);
 $unreadCount = getUnreadNotificationCount($_SESSION['user_id'] ?? 0);

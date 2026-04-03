@@ -1,6 +1,6 @@
 <?php
 /**
- * AALMAS - Common HTML Header
+ * Muayyan - Common HTML Header
  * Include at the top of every page
  */
 $pageTitle = $pageTitle ?? 'Dashboard';
@@ -10,8 +10,8 @@ $pageTitle = $pageTitle ?? 'Dashboard';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AALMAS - Academic Assessment Load & Performance Analysis System">
-    <title><?= e($pageTitle) ?> | AALMAS</title>
+    <meta name="description" content="Muayyan - Academic Assessment Load & Performance Analysis System">
+    <title><?= e($pageTitle) ?> | Muayyan</title>
     
     <!-- Favicon -->
     <link rel="icon" href="<?= BASE_URL ?>/images/logo.png" type="image/png">

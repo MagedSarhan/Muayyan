@@ -1,5 +1,5 @@
 <?php
-/** AALMAS - Advisor Student List */
+/** Muayyan - Advisor Student List */
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireRole('advisor');

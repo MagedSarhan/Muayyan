@@ -1,5 +1,5 @@
 <?php
-/** AALMAS - Forgot Password */
+/** Muayyan - Forgot Password */
 require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/includes/auth.php';
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot Password | AALMAS</title>
+    <title>Forgot Password | Muayyan</title>
     <link rel="icon" href="<?= BASE_URL ?>/images/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="<?= BASE_URL ?>/login.php"><i class="fas fa-arrow-left me-1"></i> Back to Login</a>
         </div>
         
-        <div class="auth-footer"><p>&copy; <?= date('Y') ?> AALMAS. All rights reserved.</p></div>
+        <div class="auth-footer"><p>&copy; <?= date('Y') ?> Muayyan. All rights reserved.</p></div>
     </div>
 </div>
 </body>

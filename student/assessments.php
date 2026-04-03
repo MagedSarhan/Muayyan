@@ -1,5 +1,5 @@
 <?php
-/** AALMAS - Student Assessments */
+/** Muayyan - Student Assessments */
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireRole('student');
