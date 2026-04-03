@@ -4,17 +4,17 @@
  * PDO-based MySQL connection
  */
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'muayyan_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_CHARSET', 'utf8mb4');
-
 // define('DB_HOST', 'localhost');
-// define('DB_NAME', 'u198070152_Muayyan');
-// define('DB_USER', 'u198070152_Muayyan');
-// define('DB_PASS', '(Muayyan)!1');
+// define('DB_NAME', 'muayyan_db');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
 // define('DB_CHARSET', 'utf8mb4');
+
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'u198070152_Muayyan');
+define('DB_USER', 'u198070152_Muayyan');
+define('DB_PASS', '(Muayyan)!1');
+define('DB_CHARSET', 'utf8mb4');
 function getDBConnection() {
     static $pdo = null;
     if ($pdo === null) {
