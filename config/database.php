@@ -1,6 +1,6 @@
 <?php
 /**
- * AALMAS - Database Configuration
+ * Muayyan - Database Configuration
  * PDO-based MySQL connection
  */
 

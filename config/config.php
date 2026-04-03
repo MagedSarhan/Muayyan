@@ -1,11 +1,18 @@
 <?php
 /**
- * AALMAS - Application Configuration
+ * Muayyan - Application Configuration
  */
 
-// Base URL - adjust if needed
-define('BASE_URL', '/AALMAS');
-define('SITE_NAME', 'AALMAS');
+// Dynamic BASE_URL detection - supports both local and hosting
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
+$host = $_SERVER['HTTP_HOST'];
+$script_name = $_SERVER['SCRIPT_NAME'];
+// Find the directory containing the project
+$base_dir = str_replace(basename($script_name), '', $script_name);
+$base_url = $protocol . "://" . $host . rtrim($base_dir, '/');
+
+define('BASE_URL', $base_url);
+define('SITE_NAME', 'Muayyan');
 define('SITE_FULL_NAME', 'Academic Assessment Load & Performance Analysis System');
 
 // Current Academic Period

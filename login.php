@@ -1,5 +1,5 @@
 <?php
-/** AALMAS - Login Page */
+/** Muayyan - Login Page */
 require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/includes/auth.php';
 
@@ -32,7 +32,7 @@ $success = isset($_GET['reset']) ? 'Password reset successful. Please login.' : 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | AALMAS</title>
+    <title>Login | Muayyan</title>
     <link rel="icon" href="<?= BASE_URL ?>/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -54,8 +54,8 @@ $success = isset($_GET['reset']) ? 'Password reset successful. Please login.' : 
 
         <div class="auth-card">
             <div class="auth-logo">
-                <img src="<?= BASE_URL ?>/images/logo.png" alt="AALMAS">
-                <h2>AALMAS</h2>
+                <img src="<?= BASE_URL ?>/images/logo.png" alt="Muayyan">
+                <h2>Muayyan</h2>
                 <p>Academic Assessment Load & Performance Analysis</p>
             </div>
 
@@ -96,15 +96,15 @@ $success = isset($_GET['reset']) ? 'Password reset successful. Please login.' : 
 
             <div class="demo-credentials">
                 <h6><i class="fas fa-info-circle"></i> Demo Accounts</h6>
-                <div class="cred-item"><span><strong>Admin:</strong> admin@aalmas.edu</span></div>
-                <div class="cred-item"><span><strong>Faculty:</strong> sara.faculty@aalmas.edu</span></div>
-                <div class="cred-item"><span><strong>Advisor:</strong> nora.advisor@aalmas.edu</span></div>
-                <div class="cred-item"><span><strong>Student:</strong> mohammed.stu@aalmas.edu</span></div>
+                <div class="cred-item"><span><strong>Admin:</strong> admin@muayyan.edu</span></div>
+                <div class="cred-item"><span><strong>Faculty:</strong> sara.faculty@muayyan.edu</span></div>
+                <div class="cred-item"><span><strong>Advisor:</strong> nora.advisor@muayyan.edu</span></div>
+                <div class="cred-item"><span><strong>Student:</strong> mohammed.stu@muayyan.edu</span></div>
                 <div class="cred-item"><span><strong>Password:</strong> password</span></div>
             </div>
 
             <div class="auth-footer">
-                <p>&copy; <?= date('Y') ?> AALMAS. All rights reserved.</p>
+                <p>&copy; <?= date('Y') ?> Muayyan. All rights reserved.</p>
             </div>
         </div>
     </div>

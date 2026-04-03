@@ -1,5 +1,5 @@
 -- =====================================================
--- AALMAS – Academic Assessment Load & Performance Analysis System
+-- Muayyan – Academic Assessment Load & Performance Analysis System
 -- Database Schema + Demo Data
 -- =====================================================
 
@@ -8,9 +8,9 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-DROP DATABASE IF EXISTS `aalmas_db`;
-CREATE DATABASE `aalmas_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `aalmas_db`;
+DROP DATABASE IF EXISTS `muayyan_db`;
+CREATE DATABASE `muayyan_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `muayyan_db`;
 
 -- =====================================================
 -- TABLE: users
@@ -127,8 +127,8 @@ CREATE TABLE `grades` (
   `score` DECIMAL(5,2) DEFAULT NULL,
   `remarks` TEXT DEFAULT NULL,
   `entered_by` INT NOT NULL,
-  `entered_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `entered_at? TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated_at? TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   FOREIGN KEY (`assessment_id`) REFERENCES `assessments`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`student_id`) REFERENCES `users`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`entered_by`) REFERENCES `users`(`id`),
@@ -238,7 +238,7 @@ CREATE TABLE `academic_alerts` (
   `message` TEXT NOT NULL,
   `is_read` TINYINT(1) DEFAULT 0,
   `is_resolved` TINYINT(1) DEFAULT 0,
-  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `created_at? TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (`student_id`) REFERENCES `users`(`id`) ON DELETE CASCADE,
   FOREIGN KEY (`section_id`) REFERENCES `sections`(`id`) ON DELETE SET NULL,
   INDEX `idx_severity` (`severity`),
@@ -280,16 +280,16 @@ CREATE TABLE `activity_log` (
 -- Hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
 
 INSERT INTO `users` (`user_id`, `name`, `email`, `password`, `role`, `phone`, `department`, `status`) VALUES
-('ADMIN001', 'Dr. Ahmad Al-Rashid', 'admin@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', '0501234567', 'Information Technology', 'active'),
-('FAC001', 'Dr. Sara Al-Mohsen', 'sara.faculty@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0509876543', 'Computer Science', 'active'),
-('FAC002', 'Dr. Khalid Al-Tamimi', 'khalid.faculty@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0507654321', 'Information Technology', 'active'),
-('ADV001', 'Dr. Nora Al-Harbi', 'nora.advisor@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0503456789', 'Computer Science', 'active'),
-('ADV002', 'Dr. Fahad Al-Otaibi', 'fahad.advisor@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0502345678', 'Information Technology', 'active'),
-('STU001', 'Mohammed Al-Saeed', 'mohammed.stu@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0551234567', 'Computer Science', 'active'),
-('STU002', 'Fatimah Al-Zahrani', 'fatimah.stu@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0559876543', 'Computer Science', 'active'),
-('STU003', 'Omar Al-Ghamdi', 'omar.stu@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0557654321', 'Information Technology', 'active'),
-('STU004', 'Lina Al-Shammari', 'lina.stu@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0553456789', 'Information Technology', 'active'),
-('STU005', 'Youssef Al-Mutairi', 'youssef.stu@aalmas.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0552345678', 'Computer Science', 'active');
+('ADMIN001', 'Dr. Ahmad Al-Rashid', 'admin@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', '0501234567', 'Information Technology', 'active'),
+('FAC001', 'Dr. Sara Al-Mohsen', 'sara.faculty@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0509876543', 'Computer Science', 'active'),
+('FAC002', 'Dr. Khalid Al-Tamimi', 'khalid.faculty@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0507654321', 'Information Technology', 'active'),
+('ADV001', 'Dr. Nora Al-Harbi', 'nora.advisor@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0503456789', 'Computer Science', 'active'),
+('ADV002', 'Dr. Fahad Al-Otaibi', 'fahad.advisor@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0502345678', 'Information Technology', 'active'),
+('STU001', 'Mohammed Al-Saeed', 'mohammed.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0551234567', 'Computer Science', 'active'),
+('STU002', 'Fatimah Al-Zahrani', 'fatimah.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0559876543', 'Computer Science', 'active'),
+('STU003', 'Omar Al-Ghamdi', 'omar.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0557654321', 'Information Technology', 'active'),
+('STU004', 'Lina Al-Shammari', 'lina.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0553456789', 'Information Technology', 'active'),
+('STU005', 'Youssef Al-Mutairi', 'youssef.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0552345678', 'Computer Science', 'active');
 
 -- Courses
 INSERT INTO `courses` (`code`, `name`, `credit_hours`, `department`, `description`) VALUES
@@ -384,7 +384,7 @@ INSERT INTO `assessments` (`section_id`, `title`, `type`, `max_score`, `weight_p
 
 -- Assessments for Section 6 (IT320 - Web Dev)
 INSERT INTO `assessments` (`section_id`, `title`, `type`, `max_score`, `weight_percentage`, `due_date`, `description`, `status`, `created_by`) VALUES
-(6, 'Quiz 1: HTML & CSS', 'quiz', 10, 5, '2026-02-10', NULL, 'graded', 3),
+(6, 'Quiz 1: HTML \u0026 CSS', 'quiz', 10, 5, '2026-02-10', NULL, 'graded', 3),
 (6, 'Assignment 1: Responsive Page', 'assignment', 20, 10, '2026-02-24', NULL, 'graded', 3),
 (6, 'Quiz 2: JavaScript', 'quiz', 10, 5, '2026-03-10', NULL, 'graded', 3),
 (6, 'Midterm Exam', 'midterm', 40, 25, '2026-03-15', NULL, 'graded', 3),
@@ -437,11 +437,11 @@ INSERT INTO `grades` (`assessment_id`, `student_id`, `score`, `entered_by`) VALU
 
 -- Advisor Assignments
 INSERT INTO `advisor_assignments` (`student_id`, `advisor_id`) VALUES
-(6, 4), -- Mohammed -> Dr. Nora
-(7, 4), -- Fatimah -> Dr. Nora
-(10, 4), -- Youssef -> Dr. Nora
-(8, 5), -- Omar -> Dr. Fahad
-(9, 5); -- Lina -> Dr. Fahad
+(6, 4), -- Mohammed -\u003e Dr. Nora
+(7, 4), -- Fatimah -\u003e Dr. Nora
+(10, 4), -- Youssef -\u003e Dr. Nora
+(8, 5), -- Omar -\u003e Dr. Fahad
+(9, 5); -- Lina -\u003e Dr. Fahad
 
 -- Contact Requests
 INSERT INTO `contact_requests` (`student_id`, `advisor_id`, `subject`, `message`, `priority`, `status`, `created_at`) VALUES
@@ -498,7 +498,7 @@ INSERT INTO `academic_notes` (`student_id`, `author_id`, `note_type`, `content`,
 
 -- System Settings
 INSERT INTO `system_settings` (`setting_key`, `setting_value`, `description`) VALUES
-('site_name', 'AALMAS', 'System display name'),
+('site_name', 'Muayyan', 'System display name'),
 ('current_semester', 'Spring 2026', 'Active semester'),
 ('academic_year', '2025-2026', 'Current academic year'),
 ('risk_threshold_low', '60', 'Grade percentage below which student is flagged as at risk'),
