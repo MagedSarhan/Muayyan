@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AALMAS Design System | Style Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Palette (AALMAS Actuals) */
+            --p-900: #0a1628;
+            --p-800: #0f2744;
+            --p-700: #143a5c;
+            --p-600: #1a5276;
+            --p-500: #1e6fa0;
+            --p-400: #2e86c1;
+            --p-300: #5dade2;
+            --p-200: #85c1e9;
+            --p-100: #aed6f1;
+            --p-50:  #d6eaf8;
+            --p-25:  #eaf2f8;
+
+            /* Accent */
+            --accent: #00d4aa;
+            --accent-dark: #00b894;
+            --accent-light: #55efc4;
+
+            /* Status */
+            --success: #27ae60;
+            --success-dark: #1e8449;
+            --success-light: #82e0aa;
+            --success-bg: #E9F7EF;
+
+            --warning: #f1c40f;
+            --warning-dark: #d4ac0d;
+            --warning-light: #f7dc6f;
+            --warning-bg: #FEF9E7;
+
+            --danger: #e74c3c;
+            --danger-dark: #c0392b;
+            --danger-light: #f1948a;
+            --danger-bg: #FDEDEC;
+
+            --info: #3498db;
+            --info-dark: #2980b9;
+            --info-light: #85c1e9;
+            --info-bg: #EBF5FB;
+
+            /* Neutral */
+            --gray-900: #1a1a2e;
+            --gray-800: #2d2d44;
+            --gray-700: #404060;
+            --gray-600: #6c6c8a;
+            --gray-500: #8e8ea0;
+            --gray-400: #b0b0c0;
+            --gray-300: #d0d0da;
+            --gray-200: #e8e8f0;
+            --gray-100: #f4f4f8;
+            --gray-50:  #fafafc;
+
+            /* Shadows */
+            --shadow-sm:  0 1px 3px rgba(10, 22, 40, 0.08);
+            --shadow-md:  0 4px 12px rgba(10, 22, 40, 0.12);
+            --shadow-lg:  0 8px 30px rgba(10, 22, 40, 0.16);
+            --shadow-xl:  0 15px 50px rgba(10, 22, 40, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.6;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-header {
+            /* margin-bottom: 40px; */
+            border-bottom: 2px solid var(--gray-100);
+            padding-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-family: auto;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--p-900);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- Color Palette Styling --- */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .color-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-100);
+        }
+
+        .color-block { height: 70px; width: 100%; }
+        .color-info {
+            padding: 12px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            border-bottom: 1px solid var(--gray-50);
+        }
+        .color-info span:first-child { font-weight: 600; color: var(--gray-600); }
+        .color-info span:last-child { color: var(--gray-400); font-family: monospace; }
+
+        /* --- Grayscale --- */
+        .gray-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .gray-box {
+            width: 100px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--gray-100);
+            box-shadow: var(--shadow-sm);
+        }
+        .gray-swatch { height: 60px; }
+        .gray-label {
+            padding: 8px;
+            font-size: 11px;
+            text-align: center;
+            background: white;
+        }
+        .gray-label div:first-child { font-weight: 700; margin-bottom: 2px; }
+
+        /* --- Elements --- */
+        .element-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-direction: column;
+        }
+        .element-strip {
+            padding: 15px 25px;
+            border-radius: 10px;
+            background: white;
+            border: 1px solid var(--gray-100);
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-600);
+            align-items: center;
+        }
+
+        /* --- Typography --- */
+        .typo-section {
+            margin-bottom: 50px;
+        }
+        .typo-row {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        .typo-label {
+            min-width: 250px;
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+        .typo-sample { flex: 1; color: var(--gray-900); }
+
+        h1 { font-size: 40px; font-weight: 900; }
+        h2 { font-size: 32px; font-weight: 800; }
+        h3 { font-size: 28px; font-weight: 700; }
+        h4 { font-size: 24px; font-weight: 700; }
+        h5 { font-size: 20px; font-weight: 700; }
+        h6 { font-size: 16px; font-weight: 700; }
+
+        .body-text { font-size: 16px; color: var(--gray-700); }
+        .small-text { font-size: 14px; color: var(--gray-600); }
+        .xsmall-text { font-size: 12px; color: var(--gray-500); }
+
+        /* --- Component Sandbox --- */
+        .sandbox {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        .sandbox-col {
+            background: var(--gray-50);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--gray-100);
+        }
+        .sandbox-col h4 { font-size: 15px; margin-bottom: 20px; color: var(--gray-500); text-transform: uppercase; }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-primary { background: var(--p-500); color: white; border: none; }
+        .btn-small { padding: 8px; font-size: 12px; }
+        .btn-large { padding: 16px; font-size: 16px; }
+
+        .css-code {
+            background: white;
+            padding: 10px;
+            border: 1px solid var(--gray-200);
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 11px;
+            margin-top: 15px;
+            color: var(--gray-600);
+            word-break: break-all;
+        }
+
+        .card-demo {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 15px;
+        }
+        .card-demo h5 { font-size: 15px; margin-bottom: 5px; }
+        .card-demo p { font-size: 12px; color: var(--gray-500); }
+
+        .stat-card-demo {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-md);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .stat-card-demo:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+
+        .badge-list { display: flex; flex-direction: column; gap: 8px; }
+        .badge {
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            color: white;
+        }
+        .bg-green { background: var(--success); }
+        .bg-yellow { background: var(--warning); color: var(--gray-900); }
+        .bg-red { background: var(--danger); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Primary Colors -->
+        <div class="section-header">
+            <h2>Primary & Status Colors</h2>
+        </div>
+        <div class="color-grid">
+            <!-- Primary -->
+            <div class="color-card">
+                <div class="color-block" style="background: var(--p-500);"></div>
+                <div class="color-info"><span>--primary</span><span>#1E6FA0</span></div>
+                <div class="color-block" style="background: var(--p-700);"></div>
+                <div class="color-info"><span>--primary-dark</span><span>#143A5C</span></div>
+                <div class="color-block" style="background: var(--p-300);"></div>
+                <div class="color-info"><span>--primary-light</span><span>#5DADE2</span></div>
+                <div class="color-block" style="background: var(--p-25);"></div>
+                <div class="color-info"><span>--primary-bg</span><span>#E8F1F5</span></div>
+            </div>
+            <!-- Success -->
+            <div class="color-card">
+                <div class="color-block" style="background: var(--success);"></div>
+                <div class="color-info"><span>--success</span><span>#27AE60</span></div>
+                <div class="color-block" style="background: var(--success-dark);"></div>
+                <div class="color-info"><span>--success-dark</span><span>#1E8449</span></div>
+                <div class="color-block" style="background: var(--success-light);"></div>
+                <div class="color-info"><span>--success-light</span><span>#82E0AA</span></div>
+                <div class="color-block" style="background: var(--success-bg);"></div>
+                <div class="color-info"><span>--success-bg</span><span>#E9F7EF</span></div>
+            </div>
+            <!-- Warning -->
+            <div class="color-card">
+                <div class="color-block" style="background: var(--warning);"></div>
+                <div class="color-info"><span>--warning</span><span>#F1C40F</span></div>
+                <div class="color-block" style="background: var(--warning-dark);"></div>
+                <div class="color-info"><span>--warning-dark</span><span>#D4AC0D</span></div>
+                <div class="color-block" style="background: var(--warning-light);"></div>
+                <div class="color-info"><span>--warning-light</span><span>#F7DC6F</span></div>
+                <div class="color-block" style="background: var(--warning-bg);"></div>
+                <div class="color-info"><span>--warning-bg</span><span>#FEF9E7</span></div>
+            </div>
+            <!-- Danger -->
+            <div class="color-card">
+                <div class="color-block" style="background: var(--danger);"></div>
+                <div class="color-info"><span>--danger</span><span>#E74C3C</span></div>
+                <div class="color-block" style="background: var(--danger-dark);"></div>
+                <div class="color-info"><span>--danger-dark</span><span>#C0392B</span></div>
+                <div class="color-block" style="background: var(--danger-light);"></div>
+                <div class="color-info"><span>--danger-light</span><span>#F1948A</span></div>
+                <div class="color-block" style="background: var(--danger-bg);"></div>
+                <div class="color-info"><span>--danger-bg</span><span>#FDEDEC</span></div>
+            </div>
+        </div>
+
+        <!-- Neutral Grayscale -->
+        <div class="section-header">
+            <h2>Neutral Grayscale</h2>
+        </div>
+        <div class="gray-row">
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-900);"></div><div class="gray-label"><div>--gray-900</div><div>#1A1A2E</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-800);"></div><div class="gray-label"><div>--gray-800</div><div>#2D2D44</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-700);"></div><div class="gray-label"><div>--gray-700</div><div>#404060</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-600);"></div><div class="gray-label"><div>--gray-600</div><div>#6C6C8A</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-500);"></div><div class="gray-label"><div>--gray-500</div><div>#8E8EA0</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-400);"></div><div class="gray-label"><div>--gray-400</div><div>#B0B0C0</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-300);"></div><div class="gray-label"><div>--gray-300</div><div>#D0D0DA</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-200);"></div><div class="gray-label"><div>--gray-200</div><div>#E8E8F0</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-50);"></div><div class="gray-label"><div>--gray-50</div><div>#FAFAFC</div></div></div>
+            <div class="gray-box"><div class="gray-swatch" style="background: #FFFFFF;"></div><div class="gray-label"><div>--white</div><div>#FFFFFF</div></div></div>
+        </div>
+
+        <!-- Backgrounds -->
+        <div class="section-header">
+            <h2>Backgrounds</h2>
+        </div>
+        <div class="element-row">
+            <div class="element-strip" style="background: var(--gray-100);"><span>--bg-body</span><span>#F4F4F8</span></div>
+            <div class="element-strip" style="background: #FFFFFF;"><span>--bg-card</span><span>#FFFFFF</span></div>
+            <div class="element-strip" style="background: var(--p-900); color: white;"><span>--bg-sidebar</span><span>#0A1628</span></div>
+            <div class="element-strip" style="background: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3);"><span>--bg-navbar (Glass)</span><span>rgba(255,255,255,0.7)</span></div>
+        </div>
+
+        <!-- Shadows -->
+        <div class="section-header">
+            <h2>Shadow System</h2>
+        </div>
+        <div class="element-row">
+            <div class="element-strip" style="box-shadow: var(--shadow-sm);"><span>--shadow-sm</span><span>0 1px 3px rgba(10, 22, 40, 0.08)</span></div>
+            <div class="element-strip" style="box-shadow: var(--shadow-md);"><span>--shadow-md</span><span>0 4px 12px rgba(10, 22, 40, 0.12)</span></div>
+            <div class="element-strip" style="box-shadow: var(--shadow-lg);"><span>--shadow-lg</span><span>0 8px 30px rgba(10, 22, 40, 0.16)</span></div>
+        </div>
+
+        <!-- Typography -->
+        <div class="section-header">
+            <h2>Typography Hierarchy</h2>
+        </div>
+        <div class="typo-section">
+            <div class="typo-row"><div class="typo-label">H1 — Page title (40px)</div><div class="typo-sample"><h1>Level 1 Heading</h1></div></div>
+            <div class="typo-row"><div class="typo-label">H2 — Section header (32px)</div><div class="typo-sample"><h2>Level 2 Heading</h2></div></div>
+            <div class="typo-row"><div class="typo-label">H3 — Card title (28px)</div><div class="typo-sample"><h3>Level 3 Heading</h3></div></div>
+            <div class="typo-row"><div class="typo-label">H4 — Subsection (24px)</div><div class="typo-sample"><h4>Level 4 Heading</h4></div></div>
+            <div class="typo-row"><div class="typo-label">H5 — Small header (20px)</div><div class="typo-sample"><h5>Level 5 Heading</h5></div></div>
+            <div class="typo-row"><div class="typo-label">H6 — Minor heading (16px)</div><div class="typo-sample"><h6>Level 6 Heading</h6></div></div>
+            
+            <div style="margin-top: 40px;">
+                <div class="typo-row"><div class="typo-label">Body text — Regular (16px)</div><div class="typo-sample"><p class="body-text">This paragraph demonstrates default line-height and color for comfortable reading within the AALMAS system dashboards.</p></div></div>
+                <div class="typo-row"><div class="typo-label">Small text — (14px)</div><div class="typo-sample"><p class="small-text">Used for secondary information, sidebar links, and detailed captions.</p></div></div>
+                <div class="typo-row"><div class="typo-label">Extra small — (12px)</div><div class="typo-sample"><p class="xsmall-text">Used for timestamps, badges, and very small UI hints.</p></div></div>
+            </div>
+        </div>
+
+        <!-- Components -->
+        <div class="section-header">
+            <h2>Component Sandbox</h2>
+        </div>
+        <div class="sandbox">
+            <div class="sandbox-col">
+                <h4>Buttons</h4>
+                <div class="btn btn-primary">Primary Button</div>
+                <div class="btn btn-primary btn-small">Small Button</div>
+                <div class="btn btn-primary btn-large">Large Button</div>
+                <div class="css-code">.btn-primary { background-color: #1E6FA0; border-radius: 8px; }</div>
+            </div>
+            <div class="sandbox-col">
+                <h4>Cards</h4>
+                <div class="card-demo">
+                    <h5>Standard Card</h5>
+                    <p>Border, radius, and subtle shadow.</p>
+                </div>
+                <div class="stat-card-demo">
+                    <h5>Stat Card (Hover me)</h5>
+                    <p>Stronger shadow and lift on hover.</p>
+                </div>
+            </div>
+            <div class="sandbox-col">
+                <h4>Mood Badges</h4>
+                <div class="badge-list">
+                    <div class="badge bg-green">Stable</div>
+                    <div class="badge bg-yellow">Warning</div>
+                    <div class="badge bg-red">Critical Risk</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
