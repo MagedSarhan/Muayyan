@@ -6,10 +6,14 @@
 // Dynamic BASE_URL detection - supports both local and hosting
 $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
-$script_name = $_SERVER['SCRIPT_NAME'];
-// Find the directory containing the project
-$base_dir = str_replace(basename($script_name), '', $script_name);
-$base_url = $protocol . "://" . $host . rtrim($base_dir, '/');
+
+// Get document root and project root, standardizing slashes
+$doc_root = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
+$project_root = str_replace('\\', '/', dirname(__DIR__));
+
+// The base directory is the difference between project root and doc root
+$base_dir = str_replace($doc_root, '', $project_root);
+$base_url = $protocol . "://" . $host . $base_dir;
 
 define('BASE_URL', $base_url);
 define('SITE_NAME', 'Muayyan');
