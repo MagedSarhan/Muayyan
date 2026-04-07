@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muayyan Design System | Style Guide</title>
+    <title>MOEEN Design System | Style Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            /* Primary Palette (Muayyan Actuals) */
+            /* Primary Palette (MOEEN  Actuals) */
             --p-900: #0a1628;
             --p-800: #0f2744;
             --p-700: #143a5c;
@@ -19,8 +21,8 @@
             --p-300: #5dade2;
             --p-200: #85c1e9;
             --p-100: #aed6f1;
-            --p-50:  #d6eaf8;
-            --p-25:  #eaf2f8;
+            --p-50: #d6eaf8;
+            --p-25: #eaf2f8;
 
             /* Accent */
             --accent: #00d4aa;
@@ -58,16 +60,21 @@
             --gray-300: #d0d0da;
             --gray-200: #e8e8f0;
             --gray-100: #f4f4f8;
-            --gray-50:  #fafafc;
+            --gray-50: #fafafc;
 
             /* Shadows */
-            --shadow-sm:  0 1px 3px rgba(10, 22, 40, 0.08);
-            --shadow-md:  0 4px 12px rgba(10, 22, 40, 0.12);
-            --shadow-lg:  0 8px 30px rgba(10, 22, 40, 0.16);
-            --shadow-xl:  0 15px 50px rgba(10, 22, 40, 0.2);
+            --shadow-sm: 0 1px 3px rgba(10, 22, 40, 0.08);
+            --shadow-md: 0 4px 12px rgba(10, 22, 40, 0.12);
+            --shadow-lg: 0 8px 30px rgba(10, 22, 40, 0.16);
+            --shadow-xl: 0 15px 50px rgba(10, 22, 40, 0.2);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--gray-50);
@@ -115,7 +122,11 @@
             border: 1px solid var(--gray-100);
         }
 
-        .color-block { height: 70px; width: 100%; }
+        .color-block {
+            height: 70px;
+            width: 100%;
+        }
+
         .color-info {
             padding: 12px;
             background: white;
@@ -125,8 +136,16 @@
             font-size: 12px;
             border-bottom: 1px solid var(--gray-50);
         }
-        .color-info span:first-child { font-weight: 600; color: var(--gray-600); }
-        .color-info span:last-child { color: var(--gray-400); font-family: monospace; }
+
+        .color-info span:first-child {
+            font-weight: 600;
+            color: var(--gray-600);
+        }
+
+        .color-info span:last-child {
+            color: var(--gray-400);
+            font-family: monospace;
+        }
 
         /* --- Grayscale --- */
         .gray-row {
@@ -135,6 +154,7 @@
             flex-wrap: wrap;
             margin-bottom: 50px;
         }
+
         .gray-box {
             width: 100px;
             border-radius: 8px;
@@ -142,14 +162,22 @@
             border: 1px solid var(--gray-100);
             box-shadow: var(--shadow-sm);
         }
-        .gray-swatch { height: 60px; }
+
+        .gray-swatch {
+            height: 60px;
+        }
+
         .gray-label {
             padding: 8px;
             font-size: 11px;
             text-align: center;
             background: white;
         }
-        .gray-label div:first-child { font-weight: 700; margin-bottom: 2px; }
+
+        .gray-label div:first-child {
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
 
         /* --- Elements --- */
         .element-row {
@@ -158,6 +186,7 @@
             margin-bottom: 50px;
             flex-direction: column;
         }
+
         .element-strip {
             padding: 15px 25px;
             border-radius: 10px;
@@ -175,30 +204,70 @@
         .typo-section {
             margin-bottom: 50px;
         }
+
         .typo-row {
             display: flex;
             align-items: baseline;
             margin-bottom: 20px;
             gap: 20px;
         }
+
         .typo-label {
             min-width: 250px;
             font-size: 0.8rem;
             color: var(--gray-400);
             font-weight: 500;
         }
-        .typo-sample { flex: 1; color: var(--gray-900); }
 
-        h1 { font-size: 40px; font-weight: 900; }
-        h2 { font-size: 32px; font-weight: 800; }
-        h3 { font-size: 28px; font-weight: 700; }
-        h4 { font-size: 24px; font-weight: 700; }
-        h5 { font-size: 20px; font-weight: 700; }
-        h6 { font-size: 16px; font-weight: 700; }
+        .typo-sample {
+            flex: 1;
+            color: var(--gray-900);
+        }
 
-        .body-text { font-size: 16px; color: var(--gray-700); }
-        .small-text { font-size: 14px; color: var(--gray-600); }
-        .xsmall-text { font-size: 12px; color: var(--gray-500); }
+        h1 {
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        h5 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .body-text {
+            font-size: 16px;
+            color: var(--gray-700);
+        }
+
+        .small-text {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        .xsmall-text {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
 
         /* --- Component Sandbox --- */
         .sandbox {
@@ -206,13 +275,20 @@
             grid-template-columns: 1fr 1fr 1fr;
             gap: 25px;
         }
+
         .sandbox-col {
             background: var(--gray-50);
             padding: 25px;
             border-radius: 15px;
             border: 1px solid var(--gray-100);
         }
-        .sandbox-col h4 { font-size: 15px; margin-bottom: 20px; color: var(--gray-500); text-transform: uppercase; }
+
+        .sandbox-col h4 {
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+        }
 
         .btn {
             display: block;
@@ -227,9 +303,22 @@
             text-decoration: none;
             transition: 0.3s;
         }
-        .btn-primary { background: var(--p-500); color: white; border: none; }
-        .btn-small { padding: 8px; font-size: 12px; }
-        .btn-large { padding: 16px; font-size: 16px; }
+
+        .btn-primary {
+            background: var(--p-500);
+            color: white;
+            border: none;
+        }
+
+        .btn-small {
+            padding: 8px;
+            font-size: 12px;
+        }
+
+        .btn-large {
+            padding: 16px;
+            font-size: 16px;
+        }
 
         .css-code {
             background: white;
@@ -251,8 +340,16 @@
             box-shadow: var(--shadow-sm);
             margin-bottom: 15px;
         }
-        .card-demo h5 { font-size: 15px; margin-bottom: 5px; }
-        .card-demo p { font-size: 12px; color: var(--gray-500); }
+
+        .card-demo h5 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .card-demo p {
+            font-size: 12px;
+            color: var(--gray-500);
+        }
 
         .stat-card-demo {
             background: white;
@@ -263,9 +360,18 @@
             transition: 0.3s;
             cursor: pointer;
         }
-        .stat-card-demo:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
 
-        .badge-list { display: flex; flex-direction: column; gap: 8px; }
+        .stat-card-demo:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .badge-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
         .badge {
             padding: 10px 15px;
             border-radius: 50px;
@@ -273,15 +379,26 @@
             font-weight: 700;
             color: white;
         }
-        .bg-green { background: var(--success); }
-        .bg-yellow { background: var(--warning); color: var(--gray-900); }
-        .bg-red { background: var(--danger); }
+
+        .bg-green {
+            background: var(--success);
+        }
+
+        .bg-yellow {
+            background: var(--warning);
+            color: var(--gray-900);
+        }
+
+        .bg-red {
+            background: var(--danger);
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        
+
         <!-- Primary Colors -->
         <div class="section-header">
             <h2>Primary & Status Colors</h2>
@@ -338,16 +455,76 @@
             <h2>Neutral Grayscale</h2>
         </div>
         <div class="gray-row">
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-900);"></div><div class="gray-label"><div>--gray-900</div><div>#1A1A2E</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-800);"></div><div class="gray-label"><div>--gray-800</div><div>#2D2D44</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-700);"></div><div class="gray-label"><div>--gray-700</div><div>#404060</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-600);"></div><div class="gray-label"><div>--gray-600</div><div>#6C6C8A</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-500);"></div><div class="gray-label"><div>--gray-500</div><div>#8E8EA0</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-400);"></div><div class="gray-label"><div>--gray-400</div><div>#B0B0C0</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-300);"></div><div class="gray-label"><div>--gray-300</div><div>#D0D0DA</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-200);"></div><div class="gray-label"><div>--gray-200</div><div>#E8E8F0</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: var(--gray-50);"></div><div class="gray-label"><div>--gray-50</div><div>#FAFAFC</div></div></div>
-            <div class="gray-box"><div class="gray-swatch" style="background: #FFFFFF;"></div><div class="gray-label"><div>--white</div><div>#FFFFFF</div></div></div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-900);"></div>
+                <div class="gray-label">
+                    <div>--gray-900</div>
+                    <div>#1A1A2E</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-800);"></div>
+                <div class="gray-label">
+                    <div>--gray-800</div>
+                    <div>#2D2D44</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-700);"></div>
+                <div class="gray-label">
+                    <div>--gray-700</div>
+                    <div>#404060</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-600);"></div>
+                <div class="gray-label">
+                    <div>--gray-600</div>
+                    <div>#6C6C8A</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-500);"></div>
+                <div class="gray-label">
+                    <div>--gray-500</div>
+                    <div>#8E8EA0</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-400);"></div>
+                <div class="gray-label">
+                    <div>--gray-400</div>
+                    <div>#B0B0C0</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-300);"></div>
+                <div class="gray-label">
+                    <div>--gray-300</div>
+                    <div>#D0D0DA</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-200);"></div>
+                <div class="gray-label">
+                    <div>--gray-200</div>
+                    <div>#E8E8F0</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: var(--gray-50);"></div>
+                <div class="gray-label">
+                    <div>--gray-50</div>
+                    <div>#FAFAFC</div>
+                </div>
+            </div>
+            <div class="gray-box">
+                <div class="gray-swatch" style="background: #FFFFFF;"></div>
+                <div class="gray-label">
+                    <div>--white</div>
+                    <div>#FFFFFF</div>
+                </div>
+            </div>
         </div>
 
         <!-- Backgrounds -->
@@ -355,10 +532,14 @@
             <h2>Backgrounds</h2>
         </div>
         <div class="element-row">
-            <div class="element-strip" style="background: var(--gray-100);"><span>--bg-body</span><span>#F4F4F8</span></div>
+            <div class="element-strip" style="background: var(--gray-100);"><span>--bg-body</span><span>#F4F4F8</span>
+            </div>
             <div class="element-strip" style="background: #FFFFFF;"><span>--bg-card</span><span>#FFFFFF</span></div>
-            <div class="element-strip" style="background: var(--p-900); color: white;"><span>--bg-sidebar</span><span>#0A1628</span></div>
-            <div class="element-strip" style="background: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3);"><span>--bg-navbar (Glass)</span><span>rgba(255,255,255,0.7)</span></div>
+            <div class="element-strip" style="background: var(--p-900); color: white;">
+                <span>--bg-sidebar</span><span>#0A1628</span></div>
+            <div class="element-strip"
+                style="background: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3);"><span>--bg-navbar
+                    (Glass)</span><span>rgba(255,255,255,0.7)</span></div>
         </div>
 
         <!-- Shadows -->
@@ -366,9 +547,12 @@
             <h2>Shadow System</h2>
         </div>
         <div class="element-row">
-            <div class="element-strip" style="box-shadow: var(--shadow-sm);"><span>--shadow-sm</span><span>0 1px 3px rgba(10, 22, 40, 0.08)</span></div>
-            <div class="element-strip" style="box-shadow: var(--shadow-md);"><span>--shadow-md</span><span>0 4px 12px rgba(10, 22, 40, 0.12)</span></div>
-            <div class="element-strip" style="box-shadow: var(--shadow-lg);"><span>--shadow-lg</span><span>0 8px 30px rgba(10, 22, 40, 0.16)</span></div>
+            <div class="element-strip" style="box-shadow: var(--shadow-sm);"><span>--shadow-sm</span><span>0 1px 3px
+                    rgba(10, 22, 40, 0.08)</span></div>
+            <div class="element-strip" style="box-shadow: var(--shadow-md);"><span>--shadow-md</span><span>0 4px 12px
+                    rgba(10, 22, 40, 0.12)</span></div>
+            <div class="element-strip" style="box-shadow: var(--shadow-lg);"><span>--shadow-lg</span><span>0 8px 30px
+                    rgba(10, 22, 40, 0.16)</span></div>
         </div>
 
         <!-- Typography -->
@@ -376,17 +560,63 @@
             <h2>Typography Hierarchy</h2>
         </div>
         <div class="typo-section">
-            <div class="typo-row"><div class="typo-label">H1 — Page title (40px)</div><div class="typo-sample"><h1>Level 1 Heading</h1></div></div>
-            <div class="typo-row"><div class="typo-label">H2 — Section header (32px)</div><div class="typo-sample"><h2>Level 2 Heading</h2></div></div>
-            <div class="typo-row"><div class="typo-label">H3 — Card title (28px)</div><div class="typo-sample"><h3>Level 3 Heading</h3></div></div>
-            <div class="typo-row"><div class="typo-label">H4 — Subsection (24px)</div><div class="typo-sample"><h4>Level 4 Heading</h4></div></div>
-            <div class="typo-row"><div class="typo-label">H5 — Small header (20px)</div><div class="typo-sample"><h5>Level 5 Heading</h5></div></div>
-            <div class="typo-row"><div class="typo-label">H6 — Minor heading (16px)</div><div class="typo-sample"><h6>Level 6 Heading</h6></div></div>
-            
+            <div class="typo-row">
+                <div class="typo-label">H1 — Page title (40px)</div>
+                <div class="typo-sample">
+                    <h1>Level 1 Heading</h1>
+                </div>
+            </div>
+            <div class="typo-row">
+                <div class="typo-label">H2 — Section header (32px)</div>
+                <div class="typo-sample">
+                    <h2>Level 2 Heading</h2>
+                </div>
+            </div>
+            <div class="typo-row">
+                <div class="typo-label">H3 — Card title (28px)</div>
+                <div class="typo-sample">
+                    <h3>Level 3 Heading</h3>
+                </div>
+            </div>
+            <div class="typo-row">
+                <div class="typo-label">H4 — Subsection (24px)</div>
+                <div class="typo-sample">
+                    <h4>Level 4 Heading</h4>
+                </div>
+            </div>
+            <div class="typo-row">
+                <div class="typo-label">H5 — Small header (20px)</div>
+                <div class="typo-sample">
+                    <h5>Level 5 Heading</h5>
+                </div>
+            </div>
+            <div class="typo-row">
+                <div class="typo-label">H6 — Minor heading (16px)</div>
+                <div class="typo-sample">
+                    <h6>Level 6 Heading</h6>
+                </div>
+            </div>
+
             <div style="margin-top: 40px;">
-                <div class="typo-row"><div class="typo-label">Body text — Regular (16px)</div><div class="typo-sample"><p class="body-text">This paragraph demonstrates default line-height and color for comfortable reading within the Muayyan system dashboards.</p></div></div>
-                <div class="typo-row"><div class="typo-label">Small text — (14px)</div><div class="typo-sample"><p class="small-text">Used for secondary information, sidebar links, and detailed captions.</p></div></div>
-                <div class="typo-row"><div class="typo-label">Extra small — (12px)</div><div class="typo-sample"><p class="xsmall-text">Used for timestamps, badges, and very small UI hints.</p></div></div>
+                <div class="typo-row">
+                    <div class="typo-label">Body text — Regular (16px)</div>
+                    <div class="typo-sample">
+                        <p class="body-text">This paragraph demonstrates default line-height and color for comfortable
+                            reading within the MOEEN system dashboards.</p>
+                    </div>
+                </div>
+                <div class="typo-row">
+                    <div class="typo-label">Small text — (14px)</div>
+                    <div class="typo-sample">
+                        <p class="small-text">Used for secondary information, sidebar links, and detailed captions.</p>
+                    </div>
+                </div>
+                <div class="typo-row">
+                    <div class="typo-label">Extra small — (12px)</div>
+                    <div class="typo-sample">
+                        <p class="xsmall-text">Used for timestamps, badges, and very small UI hints.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -426,4 +656,5 @@
     </div>
 
 </body>
+
 </html>

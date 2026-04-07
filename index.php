@@ -1,5 +1,5 @@
 <?php
-/** Muayyan - Landing Page */
+/** MOEEN  - Landing Page */
 require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/includes/auth.php';
 
@@ -15,8 +15,8 @@ if (isLoggedIn()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Muayyan - Academic Assessment Load & Performance Analysis System. Monitor student performance, analyze academic workload, and support early intervention.">
-    <title>Muayyan — Academic Assessment Load & Performance Analysis System</title>
+        content="MOEEN  - Academic Assessment Load & Performance Analysis System. Monitor student performance, analyze academic workload, and support early intervention.">
+    <title>MOEEN — Academic Assessment Load & Performance Analysis System</title>
     <link rel="icon" href="<?= BASE_URL ?>/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -671,8 +671,8 @@ if (isLoggedIn()) {
     <!-- Navbar -->
     <nav class="nav-main" id="mainNav">
         <div class="container d-flex justify-content-between align-items-center">
-            <a href="#" class="nav-brand"><img src="<?= BASE_URL ?>/images/logo.png"
-                    alt="Muayyan"><span>Muayyan</span></a>
+            <a href="#" class="nav-brand"><img src="<?= BASE_URL ?>/images/logo.png" alt="MOEEN "><span>MOEEN
+                </span></a>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#users">Users</a>
@@ -690,14 +690,14 @@ if (isLoggedIn()) {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
-                   
+
                     <h1 class="hero-title">
                         Empower Academic<br>
                         <span class="gradient-text">Excellence & Early</span><br>
                         Intervention
                     </h1>
                     <p class="hero-subtitle">
-                        Muayyan helps faculty and advisors monitor student performance, analyze assessment workload,
+                        MOEEN helps faculty and advisors monitor student performance, analyze assessment workload,
                         detect at-risk students early, and provide targeted academic support — all in one powerful
                         platform.
                     </p>
@@ -710,7 +710,7 @@ if (isLoggedIn()) {
                 </div>
                 <div class="col-lg-6 hero-visual">
                     <div class="hero-card">
-                        <div class="hero-logo-float"><img src="<?= BASE_URL ?>/images/logo.png" alt="Muayyan"></div>
+                        <div class="hero-logo-float"><img src="<?= BASE_URL ?>/images/logo.png" alt="MOEEN "></div>
                         <div class="row g-3">
                             <div class="col-4">
                                 <div class="hero-stat">
@@ -887,7 +887,7 @@ if (isLoggedIn()) {
     <section class="section section-light" id="how">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-title">How Muayyan Works</h2>
+                <h2 class="section-title">How MOEEN Works</h2>
                 <p class="section-subtitle">A seamless workflow that connects faculty, advisors, and students for
                     academic success.</p>
             </div>
@@ -928,7 +928,7 @@ if (isLoggedIn()) {
     <section class="cta-section">
         <div class="container text-center position-relative" style="z-index:1">
             <h2>Ready to Transform Academic Monitoring?</h2>
-            <p>Start using Muayyan today and empower your institution with data-driven academic support.</p>
+            <p>Start using MOEEN today and empower your institution with data-driven academic support.</p>
             <a href="<?= BASE_URL ?>/login.php" class="btn-hero-primary"><i class="fas fa-sign-in-alt me-2"></i>Sign In
                 Now</a>
         </div>
@@ -940,8 +940,8 @@ if (isLoggedIn()) {
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <img src="<?= BASE_URL ?>/images/logo.png" alt="Muayyan">
-                        <h5>Muayyan</h5>
+                        <img src="<?= BASE_URL ?>/images/logo.png" alt="MOEEN ">
+                        <h5>MOEEN </h5>
                         <p>Academic Assessment Load & Performance Analysis System — empowering institutions for academic
                             excellence.</p>
                     </div>
@@ -964,14 +964,14 @@ if (isLoggedIn()) {
                 <div class="col-lg-4 col-md-4">
                     <div class="footer-links">
                         <h6>About</h6>
-                        <p style="font-size:.82rem;line-height:1.6">Muayyan is a graduation project designed to help
+                        <p style="font-size:.82rem;line-height:1.6">MOEEN is a graduation project designed to help
                             educational institutions monitor student academic performance and provide early intervention
                             for at-risk students.</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom text-center">
-                <p>&copy; <?= date('Y') ?> Muayyan. All rights reserved. Built for academic excellence.</p>
+                <p>&copy; <?= date('Y') ?> MOEEN . All rights reserved. Built for academic excellence.</p>
             </div>
         </div>
     </footer>

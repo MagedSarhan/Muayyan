@@ -1,6 +1,6 @@
 <?php
 /**
- * Muayyan - Application Configuration
+ * MOEEN  - Application Configuration
  */
 
 // Dynamic BASE_URL detection - supports both local and hosting
@@ -16,7 +16,7 @@ $base_dir = str_replace($doc_root, '', $project_root);
 $base_url = $protocol . "://" . $host . $base_dir;
 
 define('BASE_URL', $base_url);
-define('SITE_NAME', 'Muayyan');
+define('SITE_NAME', 'MOEEN ');
 define('SITE_FULL_NAME', 'Academic Assessment Load & Performance Analysis System');
 
 // Current Academic Period

@@ -1,5 +1,5 @@
 /**
- * Muayyan - Core JavaScript
+ * MOEEN  - Core JavaScript
  */
 
 // Sidebar Toggle
@@ -17,7 +17,7 @@ function toggleNotifications() {
 }
 
 // Close notification dropdown on outside click
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     const notifBtn = document.getElementById('notifBtn');
     const notifDropdown = document.getElementById('notifDropdown');
     if (notifBtn && notifDropdown && !notifBtn.contains(e.target) && !notifDropdown.contains(e.target)) {
@@ -39,7 +39,7 @@ function markAllRead() {
 
 // Get base URL
 function getBaseUrl() {
-    return '/Muayyan';
+    return '/MOEEN ';
 }
 
 // Animated Counter
@@ -64,7 +64,7 @@ function animateCounters() {
 }
 
 // Flash message auto-dismiss
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Animate counters
     animateCounters();
 
@@ -129,7 +129,7 @@ function printReport(elementId) {
     if (!content) return;
     const win = window.open('', '_blank');
     win.document.write(`
-        <html><head><title>Muayyan Report</title>
+        <html><head><title>MOEEN  Report</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>body{padding:20px;font-family:Inter,sans-serif} @media print{.no-print{display:none}}</style>
         </head><body>${content.innerHTML}

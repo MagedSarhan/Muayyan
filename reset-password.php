@@ -1,5 +1,5 @@
 <?php
-/** Muayyan - Reset Password */
+/** MOEEN  - Reset Password */
 require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/includes/auth.php';
 
@@ -30,44 +30,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password | Muayyan</title>
+    <title>Reset Password | MOEEN </title>
     <link rel="icon" href="<?= BASE_URL ?>/images/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet">
     <link href="<?= BASE_URL ?>/assets/css/auth.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="auth-wrapper">
-    <div class="auth-shapes"><div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div></div>
-    <div class="auth-card">
-        <div class="auth-logo">
-            <div class="auth-icon-large"><i class="fas fa-lock-open"></i></div>
-            <h2>Reset Password</h2>
-            <p>Enter your new password below</p>
+    <div class="auth-wrapper">
+        <div class="auth-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
         </div>
-        <?php if ($error): ?>
-        <div class="auth-alert error"><i class="fas fa-exclamation-circle"></i> <?= e($error) ?></div>
-        <?php endif; ?>
-        <form class="auth-form" method="POST">
-            <div class="form-floating position-relative">
-                <i class="fas fa-lock input-icon"></i>
-                <input type="password" class="form-control" id="password" name="password" placeholder="New Password" required minlength="6">
-                <label for="password">New Password</label>
+        <div class="auth-card">
+            <div class="auth-logo">
+                <div class="auth-icon-large"><i class="fas fa-lock-open"></i></div>
+                <h2>Reset Password</h2>
+                <p>Enter your new password below</p>
             </div>
-            <div class="form-floating position-relative">
-                <i class="fas fa-lock input-icon"></i>
-                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm" required>
-                <label for="confirm_password">Confirm Password</label>
+            <?php if ($error): ?>
+                <div class="auth-alert error"><i class="fas fa-exclamation-circle"></i> <?= e($error) ?></div>
+            <?php endif; ?>
+            <form class="auth-form" method="POST">
+                <div class="form-floating position-relative">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="New Password"
+                        required minlength="6">
+                    <label for="password">New Password</label>
+                </div>
+                <div class="form-floating position-relative">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password"
+                        placeholder="Confirm" required>
+                    <label for="confirm_password">Confirm Password</label>
+                </div>
+                <button type="submit" class="btn btn-login"><i class="fas fa-save me-2"></i> Reset Password</button>
+            </form>
+            <div class="auth-footer">
+                <p>&copy; <?= date('Y') ?> MOEEN .</p>
             </div>
-            <button type="submit" class="btn btn-login"><i class="fas fa-save me-2"></i> Reset Password</button>
-        </form>
-        <div class="auth-footer"><p>&copy; <?= date('Y') ?> Muayyan.</p></div>
+        </div>
     </div>
-</div>
 </body>
+
 </html>

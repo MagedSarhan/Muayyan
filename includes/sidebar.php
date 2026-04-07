@@ -1,6 +1,6 @@
 <?php
 /**
- * Muayyan - Sidebar Navigation
+ * MOEEN  - Sidebar Navigation
  * Role-based navigation menu
  */
 $currentPage = basename($_SERVER['PHP_SELF']);
@@ -15,8 +15,8 @@ $unreadNotifs = getUnreadNotificationCount($_SESSION['user_id'] ?? 0);
 <aside class="sidebar" id="sidebar">
     <!-- Brand -->
     <div class="sidebar-brand">
-        <img src="<?= BASE_URL ?>/images/logo.png" alt="Muayyan">
-        <h1>Muayyan<small>Performance Analysis</small></h1>
+        <img src="<?= BASE_URL ?>/images/logo.png" alt="MOEEN ">
+        <h1>MOEEN <small>Performance Analysis</small></h1>
     </div>
 
     <!-- Navigation -->

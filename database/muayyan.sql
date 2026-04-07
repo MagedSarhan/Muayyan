@@ -1,5 +1,5 @@
 -- =====================================================
--- Muayyan – Academic Assessment Load & Performance Analysis System
+-- MOEEN  – Academic Assessment Load & Performance Analysis System
 -- Database Schema + Demo Data
 -- =====================================================
 
@@ -8,9 +8,9 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-DROP DATABASE IF EXISTS `muayyan_db`;
-CREATE DATABASE `muayyan_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `muayyan_db`;
+DROP DATABASE IF EXISTS `MOEEN _db`;
+CREATE DATABASE `MOEEN _db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `MOEEN _db`;
 
 -- =====================================================
 -- TABLE: users
@@ -280,16 +280,16 @@ CREATE TABLE `activity_log` (
 -- Hash: $2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
 
 INSERT INTO `users` (`user_id`, `name`, `email`, `password`, `role`, `phone`, `department`, `status`) VALUES
-('ADMIN001', 'Dr. Ahmad Al-Rashid', 'admin@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', '0501234567', 'Information Technology', 'active'),
-('FAC001', 'Dr. Sara Al-Mohsen', 'sara.faculty@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0509876543', 'Computer Science', 'active'),
-('FAC002', 'Dr. Khalid Al-Tamimi', 'khalid.faculty@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0507654321', 'Information Technology', 'active'),
-('ADV001', 'Dr. Nora Al-Harbi', 'nora.advisor@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0503456789', 'Computer Science', 'active'),
-('ADV002', 'Dr. Fahad Al-Otaibi', 'fahad.advisor@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0502345678', 'Information Technology', 'active'),
-('STU001', 'Mohammed Al-Saeed', 'mohammed.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0551234567', 'Computer Science', 'active'),
-('STU002', 'Fatimah Al-Zahrani', 'fatimah.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0559876543', 'Computer Science', 'active'),
-('STU003', 'Omar Al-Ghamdi', 'omar.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0557654321', 'Information Technology', 'active'),
-('STU004', 'Lina Al-Shammari', 'lina.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0553456789', 'Information Technology', 'active'),
-('STU005', 'Youssef Al-Mutairi', 'youssef.stu@muayyan.edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0552345678', 'Computer Science', 'active');
+('ADMIN001', 'Dr. Ahmad Al-Rashid', 'admin@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', '0501234567', 'Information Technology', 'active'),
+('FAC001', 'Dr. Sara Al-Mohsen', 'sara.faculty@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0509876543', 'Computer Science', 'active'),
+('FAC002', 'Dr. Khalid Al-Tamimi', 'khalid.faculty@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty', '0507654321', 'Information Technology', 'active'),
+('ADV001', 'Dr. Nora Al-Harbi', 'nora.advisor@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0503456789', 'Computer Science', 'active'),
+('ADV002', 'Dr. Fahad Al-Otaibi', 'fahad.advisor@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'advisor', '0502345678', 'Information Technology', 'active'),
+('STU001', 'Mohammed Al-Saeed', 'mohammed.stu@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0551234567', 'Computer Science', 'active'),
+('STU002', 'Fatimah Al-Zahrani', 'fatimah.stu@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0559876543', 'Computer Science', 'active'),
+('STU003', 'Omar Al-Ghamdi', 'omar.stu@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0557654321', 'Information Technology', 'active'),
+('STU004', 'Lina Al-Shammari', 'lina.stu@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0553456789', 'Information Technology', 'active'),
+('STU005', 'Youssef Al-Mutairi', 'youssef.stu@MOEEN .edu', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'student', '0552345678', 'Computer Science', 'active');
 
 -- Courses
 INSERT INTO `courses` (`code`, `name`, `credit_hours`, `department`, `description`) VALUES
@@ -498,7 +498,7 @@ INSERT INTO `academic_notes` (`student_id`, `author_id`, `note_type`, `content`,
 
 -- System Settings
 INSERT INTO `system_settings` (`setting_key`, `setting_value`, `description`) VALUES
-('site_name', 'Muayyan', 'System display name'),
+('site_name', 'MOEEN ', 'System display name'),
 ('current_semester', 'Spring 2026', 'Active semester'),
 ('academic_year', '2025-2026', 'Current academic year'),
 ('risk_threshold_low', '60', 'Grade percentage below which student is flagged as at risk'),
