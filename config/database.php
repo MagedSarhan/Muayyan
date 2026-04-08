@@ -1,30 +1,29 @@
 <?php
 /**
- * MOEEN  - Database Configuration
+ * Muayyan - Database Configuration
  * PDO-based MySQL connection
  */
 
 // define('DB_HOST', 'localhost');
-// define('DB_NAME', 'MOEEN _db');
+// define('DB_NAME', 'muayyan_db');
 // define('DB_USER', 'root');
 // define('DB_PASS', '');
 // define('DB_CHARSET', 'utf8mb4');
 
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'u198070152_MOEEN ');
-define('DB_USER', 'u198070152_MOEEN ');
-define('DB_PASS', '(MOEEN )!1');
+define('DB_NAME', 'u198070152_Muayyan');
+define('DB_USER', 'u198070152_Muayyan');
+define('DB_PASS', '(Muayyan)!1');
 define('DB_CHARSET', 'utf8mb4');
-function getDBConnection()
-{
+function getDBConnection() {
     static $pdo = null;
     if ($pdo === null) {
         try {
             $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
             $options = [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES => false,
+                PDO::ATTR_EMULATE_PREPARES   => false,
             ];
             $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
         } catch (PDOException $e) {
