@@ -4,17 +4,17 @@
  * PDO-based MySQL connection
  */
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'MOEEN _db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_CHARSET', 'utf8mb4');
-
 // define('DB_HOST', 'localhost');
-// define('DB_NAME', 'u198070152_MOEEN ');
-// define('DB_USER', 'u198070152_MOEEN ');
-// define('DB_PASS', '(MOEEN )!1');
+// define('DB_NAME', 'MOEEN _db');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
 // define('DB_CHARSET', 'utf8mb4');
+
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'u198070152_MOEEN ');
+define('DB_USER', 'u198070152_MOEEN ');
+define('DB_PASS', '(MOEEN )!1');
+define('DB_CHARSET', 'utf8mb4');
 function getDBConnection()
 {
     static $pdo = null;
