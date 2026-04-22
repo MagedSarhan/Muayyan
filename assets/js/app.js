@@ -42,31 +42,14 @@ function getBaseUrl() {
     return '/MOEEN ';
 }
 
-// Animated Counter
-function animateCounters() {
+// Flash message auto-dismiss
+document.addEventListener('DOMContentLoaded', function () {
+    // Show stat values directly (no animation)
     document.querySelectorAll('.stat-value[data-count]').forEach(el => {
         const target = parseFloat(el.dataset.count);
         const decimals = el.dataset.decimals ? parseInt(el.dataset.decimals) : 0;
-        const duration = 1500;
-        const start = 0;
-        const startTime = performance.now();
-
-        function update(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
-            const value = start + (target - start) * eased;
-            el.textContent = value.toFixed(decimals);
-            if (progress < 1) requestAnimationFrame(update);
-        }
-        requestAnimationFrame(update);
+        el.textContent = target.toFixed(decimals);
     });
-}
-
-// Flash message auto-dismiss
-document.addEventListener('DOMContentLoaded', function () {
-    // Animate counters
-    animateCounters();
 
     // Auto-dismiss alerts
     document.querySelectorAll('.alert-dismissible').forEach(alert => {
@@ -74,20 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const bsAlert = bootstrap.Alert.getOrCreateInstance(alert);
             bsAlert.close();
         }, 5000);
-    });
-
-    // Animate elements on scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.stat-card, .card, .course-card').forEach(el => {
-        observer.observe(el);
     });
 });
 

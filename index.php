@@ -59,14 +59,12 @@ if (isLoggedIn()) {
             right: 0;
             z-index: 1000;
             padding: 18px 0;
-            transition: all .3s ease
         }
 
         .nav-main.scrolled {
-            background: rgba(10, 22, 40, .95);
-            backdrop-filter: blur(20px);
+            background: #0a1628;
             padding: 10px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, .2)
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .nav-brand {
@@ -79,14 +77,13 @@ if (isLoggedIn()) {
         .nav-brand img {
             width: 38px;
             height: 38px;
-            filter: drop-shadow(0 2px 8px rgba(93, 173, 226, .4))
         }
 
         .nav-brand span {
             font-size: 1.2rem;
-            font-weight: 800;
+            font-weight: 700;
             color: #fff;
-            letter-spacing: 2px
+            letter-spacing: 1px
         }
 
         .nav-links {
@@ -100,7 +97,6 @@ if (isLoggedIn()) {
             font-size: .85rem;
             font-weight: 500;
             text-decoration: none;
-            transition: color .2s
         }
 
         .nav-links a:hover {
@@ -108,117 +104,42 @@ if (isLoggedIn()) {
         }
 
         .btn-cta {
-            background: linear-gradient(135deg, var(--p500), var(--p300));
+            background: #1e6fa0;
             color: #fff !important;
             padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 700;
+            border-radius: 6px;
+            font-weight: 600;
             border: none;
             font-size: .85rem;
-            transition: all .3s;
-            box-shadow: 0 4px 15px rgba(30, 111, 160, .3)
-        }
-
-        .btn-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(30, 111, 160, .5)
         }
 
         /* ---- HERO ---- */
         .hero {
             min-height: 100vh;
-            position: relative;
             display: flex;
             align-items: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0a1628 0%, #0f2744 25%, #143a5c 50%, #1a5276 75%, #1e6fa0 100%)
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle 600px at 70% 30%, rgba(93, 173, 226, .12), transparent),
-                radial-gradient(circle 400px at 20% 70%, rgba(0, 212, 170, .06), transparent);
-            pointer-events: none
-        }
-
-        .hero-particles {
-            position: absolute;
-            inset: 0;
-            overflow: hidden
-        }
-
-        .hero-particles .dot {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: rgba(255, 255, 255, .2);
-            border-radius: 50%;
-            animation: float-dot linear infinite
-        }
-
-        @keyframes float-dot {
-            0% {
-                transform: translateY(100vh) scale(0);
-                opacity: 0
-            }
-
-            10% {
-                opacity: 1
-            }
-
-            90% {
-                opacity: 1
-            }
-
-            100% {
-                transform: translateY(-10vh) scale(1);
-                opacity: 0
-            }
+            background: #0f2744;
+            padding-top: 80px;
         }
 
         .hero-content {
             position: relative;
-            z-index: 2
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(255, 255, 255, .12);
-            border-radius: 50px;
-            padding: 6px 18px;
-            font-size: .75rem;
-            color: var(--p200);
-            font-weight: 600;
-            margin-bottom: 25px;
-            backdrop-filter: blur(10px)
-        }
-
-        .hero-badge i {
-            color: var(--accent)
         }
 
         .hero-title {
-            font-size: 3.5rem;
-            font-weight: 900;
+            font-size: 2.8rem;
+            font-weight: 800;
             color: #fff;
-            line-height: 1.15;
+            line-height: 1.2;
             margin-bottom: 20px
         }
 
         .hero-title .gradient-text {
-            background: linear-gradient(135deg, var(--p200), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text
+            color: var(--p200);
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: rgba(255, 255, 255, .7);
             line-height: 1.7;
             max-width: 520px;
@@ -232,98 +153,77 @@ if (isLoggedIn()) {
         }
 
         .btn-hero-primary {
-            background: linear-gradient(135deg, var(--accent), #00b894);
+            background: #00b894;
             color: #fff;
-            padding: 14px 32px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: .95rem;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: .9rem;
             border: none;
             text-decoration: none;
-            transition: all .3s;
-            box-shadow: 0 4px 20px rgba(0, 212, 170, .3)
+            display: inline-block;
         }
 
         .btn-hero-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0, 212, 170, .5);
+            background: #00a381;
             color: #fff
         }
 
         .btn-hero-outline {
-            border: 2px solid rgba(255, 255, 255, .25);
+            border: 1px solid rgba(255, 255, 255, .4);
             color: #fff;
-            padding: 14px 32px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: .95rem;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: .9rem;
             text-decoration: none;
-            transition: all .3s;
+            display: inline-block;
             background: transparent
         }
 
         .btn-hero-outline:hover {
             border-color: #fff;
-            background: rgba(255, 255, 255, .05);
             color: #fff
         }
 
         .hero-visual {
             position: relative;
-            z-index: 2
         }
 
         .hero-card {
-            background: rgba(255, 255, 255, .06);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, .1);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .3)
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 8px;
+            padding: 25px;
         }
 
         .hero-stat {
             text-align: center;
-            padding: 15px
+            padding: 12px
         }
 
         .hero-stat-value {
-            font-size: 2rem;
-            font-weight: 800;
+            font-size: 1.8rem;
+            font-weight: 700;
             color: #fff
         }
 
         .hero-stat-label {
-            font-size: .75rem;
+            font-size: .72rem;
             color: var(--p200);
-            font-weight: 500;
-            margin-top: 5px
+            margin-top: 4px
         }
 
         .hero-logo-float {
             position: absolute;
-            top: -30px;
-            right: -20px;
-            width: 120px;
-            height: 120px;
-            animation: float-logo 6s ease-in-out infinite
+            top: -20px;
+            right: -15px;
+            width: 90px;
+            height: 90px;
         }
 
         .hero-logo-float img {
             width: 100%;
-            filter: drop-shadow(0 10px 30px rgba(30, 111, 160, .5))
-        }
-
-        @keyframes float-logo {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg)
-            }
-
-            50% {
-                transform: translateY(-15px) rotate(5deg)
-            }
         }
 
         /* ---- FEATURES ---- */
@@ -352,35 +252,10 @@ if (isLoggedIn()) {
 
         .feature-card {
             background: #fff;
-            border: 1px solid #e8e8f0;
-            border-radius: 16px;
-            padding: 35px 30px;
-            transition: all .3s;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 25px;
             height: 100%;
-            position: relative;
-            overflow: hidden
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--p500), var(--p300));
-            transform: scaleX(0);
-            transition: transform .3s;
-            transform-origin: left
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(10, 22, 40, .1)
-        }
-
-        .feature-card:hover::before {
-            transform: scaleX(1)
         }
 
         .feature-icon {
@@ -457,19 +332,19 @@ if (isLoggedIn()) {
         }
 
         .user-type-icon.admin {
-            background: linear-gradient(135deg, var(--p800), var(--p600))
+            background: var(--p700)
         }
 
         .user-type-icon.faculty {
-            background: linear-gradient(135deg, var(--p500), var(--p300))
+            background: var(--p500)
         }
 
         .user-type-icon.advisor {
-            background: linear-gradient(135deg, #27ae60, #55efc4)
+            background: #27ae60
         }
 
         .user-type-icon.student {
-            background: linear-gradient(135deg, #e67e22, #f39c12)
+            background: #e67e22
         }
 
         .user-type h5 {
@@ -510,18 +385,18 @@ if (isLoggedIn()) {
         }
 
         .step-num {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--p500), var(--p300));
+            background: var(--p500);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            font-weight: 800;
+            font-size: 1.1rem;
+            font-weight: 700;
             margin: 0 auto 20px;
-            box-shadow: 0 4px 15px rgba(30, 111, 160, .3)
+            border: 2px solid var(--p300)
         }
 
         .step-card h5 {
@@ -537,21 +412,8 @@ if (isLoggedIn()) {
 
         /* ---- CTA ---- */
         .cta-section {
-            background: linear-gradient(135deg, var(--p900), var(--p700), var(--p500));
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 400px;
-            height: 400px;
-            background: rgba(255, 255, 255, .03);
-            border-radius: 50%
+            background: var(--p800);
+            padding: 60px 0;
         }
 
         .cta-section h2 {
@@ -686,7 +548,6 @@ if (isLoggedIn()) {
 
     <!-- Hero -->
     <section class="hero" id="hero">
-        <div class="hero-particles" id="particles"></div>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
@@ -980,27 +841,6 @@ if (isLoggedIn()) {
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Generate floating particles
-        const particlesEl = document.getElementById('particles');
-        for (let i = 0; i < 30; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'dot';
-            dot.style.left = Math.random() * 100 + '%';
-            dot.style.animationDuration = (8 + Math.random() * 12) + 's';
-            dot.style.animationDelay = Math.random() * 10 + 's';
-            dot.style.width = dot.style.height = (1 + Math.random() * 3) + 'px';
-            particlesEl.appendChild(dot);
-        }
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
         });
     </script>
 </body>

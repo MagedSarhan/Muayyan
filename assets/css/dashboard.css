@@ -1,58 +1,11 @@
 /* MOEEN  - Dashboard Styles */
 
 .welcome-banner {
-    background: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-500) 100%);
-    border-radius: var(--border-radius-lg);
-    padding: 30px;
+    background: var(--primary-600);
+    border-radius: var(--border-radius);
+    padding: 25px;
     color: #fff;
-    position: relative;
-    overflow: hidden;
     margin-bottom: 25px;
-}
-
-.welcome-banner::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 50%;
-}
-
-.welcome-banner::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    right: 10%;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 50%;
-}
-
-.welcome-banner h3 {
-    font-weight: 800;
-    margin-bottom: 5px;
-    position: relative;
-    z-index: 1;
-}
-
-.welcome-banner p {
-    opacity: 0.85;
-    font-size: 0.9rem;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-}
-
-.welcome-banner .welcome-date {
-    font-size: 0.8rem;
-    opacity: 0.7;
-    margin-top: 8px;
-    position: relative;
-    z-index: 1;
 }
 
 .section-title {
@@ -89,7 +42,7 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-400), var(--primary-300));
+    background: var(--primary-400);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,12 +74,6 @@
     border-radius: var(--border-radius-sm);
     padding: 12px;
     text-align: center;
-    transition: all var(--transition-fast);
-}
-
-.workload-day:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 .workload-day .day-name {
@@ -368,12 +315,11 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-500), var(--primary-300));
+    background: var(--primary-400);
 }
 
 .course-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
 }
 
 .course-card .course-code {
