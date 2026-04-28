@@ -4,7 +4,7 @@ require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireRole('advisor');
 $db = getDBConnection();
-$pageTitle = 'Advisor Dashboard';
+$pageTitle = 'Home';
 $aid = $_SESSION['user_id'];
 
 $assignedStudents = $db->query("SELECT COUNT(*) FROM advisor_assignments WHERE advisor_id = $aid AND status='active'")->fetchColumn();
@@ -123,8 +123,9 @@ include __DIR__ . '/../includes/topbar.php';
                                                 <div class="d-flex align-items-center gap-2">
                                                     <div class="student-avatar"
                                                         style="width:30px;height:30px;font-size:.65rem">
-                                                        <?= getInitials($st['name']) ?></div><span
-                                                        class="fw-semibold"><?= e($st['name']) ?></span>
+                                                        <?= getInitials($st['name']) ?></div><a
+                                                        href="<?= BASE_URL ?>/advisor/student_profile.php?id=<?= $st['id'] ?>"
+                                                        class="fw-semibold text-decoration-none"><?= e($st['name']) ?></a>
                                                 </div>
                                             </td>
                                             <td><code><?= e($st['user_id']) ?></code></td>

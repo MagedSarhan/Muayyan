@@ -24,7 +24,7 @@ $unreadNotifs = getUnreadNotificationCount($_SESSION['user_id'] ?? 0);
         <?php if ($role === 'admin'): ?>
             <div class="nav-section">Main</div>
             <a href="<?= BASE_URL ?>/admin/" class="nav-link <?= $currentPage === 'index.php' ? 'active' : '' ?>">
-                <i class="fas fa-th-large"></i> Dashboard
+                <i class="fas fa-home"></i> Home
             </a>
 
             <div class="nav-section">Management</div>
@@ -53,7 +53,7 @@ $unreadNotifs = getUnreadNotificationCount($_SESSION['user_id'] ?? 0);
         <?php elseif ($role === 'faculty'): ?>
             <div class="nav-section">Main</div>
             <a href="<?= BASE_URL ?>/faculty/" class="nav-link <?= $currentPage === 'index.php' ? 'active' : '' ?>">
-                <i class="fas fa-th-large"></i> Dashboard
+                <i class="fas fa-home"></i> Home
             </a>
 
             <div class="nav-section">Teaching</div>
@@ -87,7 +87,7 @@ $unreadNotifs = getUnreadNotificationCount($_SESSION['user_id'] ?? 0);
         <?php elseif ($role === 'advisor'): ?>
             <div class="nav-section">Main</div>
             <a href="<?= BASE_URL ?>/advisor/" class="nav-link <?= $currentPage === 'index.php' ? 'active' : '' ?>">
-                <i class="fas fa-th-large"></i> Dashboard
+                <i class="fas fa-home"></i> Home
             </a>
 
             <div class="nav-section">Advising</div>
@@ -132,14 +132,10 @@ $unreadNotifs = getUnreadNotificationCount($_SESSION['user_id'] ?? 0);
         <?php elseif ($role === 'student'): ?>
             <div class="nav-section">Main</div>
             <a href="<?= BASE_URL ?>/student/" class="nav-link <?= $currentPage === 'index.php' ? 'active' : '' ?>">
-                <i class="fas fa-th-large"></i> Dashboard
+                <i class="fas fa-home"></i> Home
             </a>
 
             <div class="nav-section">Academic</div>
-            <a href="<?= BASE_URL ?>/student/courses.php"
-                class="nav-link <?= $currentPage === 'courses.php' ? 'active' : '' ?>">
-                <i class="fas fa-book-open"></i> My Courses
-            </a>
             <a href="<?= BASE_URL ?>/student/assessments.php"
                 class="nav-link <?= $currentPage === 'assessments.php' ? 'active' : '' ?>">
                 <i class="fas fa-clipboard-list"></i> Assessments
@@ -165,6 +161,10 @@ $unreadNotifs = getUnreadNotificationCount($_SESSION['user_id'] ?? 0);
                 if ($sac > 0): ?>
                     <span class="nav-badge"><?= $sac ?></span>
                 <?php endif; ?>
+            </a>
+            <a href="<?= BASE_URL ?>/student/excuses.php"
+                class="nav-link <?= $currentPage === 'excuses.php' ? 'active' : '' ?>">
+                <i class="fas fa-file-medical"></i> Excuses
             </a>
             <a href="<?= BASE_URL ?>/student/contact.php"
                 class="nav-link <?= $currentPage === 'contact.php' ? 'active' : '' ?>">

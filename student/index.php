@@ -4,7 +4,7 @@ require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireRole('student');
 $db = getDBConnection();
-$pageTitle = 'Student Dashboard';
+$pageTitle = 'Home';
 $sid = $_SESSION['user_id'];
 
 $risk = calculateRiskScore($sid);

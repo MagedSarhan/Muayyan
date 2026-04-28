@@ -51,9 +51,9 @@ include __DIR__ . '/../includes/topbar.php';
                                 <div class="progress-bar <?= $risk['score'] >= 80 ? 'success' : ($risk['score'] >= 60 ? 'warning' : 'danger') ?>"
                                     style="width:<?= $risk['score'] ?>%"></div>
                             </div>
-                            <a href="<?= BASE_URL ?>/advisor/reports.php?student=<?= $st['id'] ?>"
-                                class="btn btn-sm btn-outline-primary w-100"><i class="fas fa-chart-line me-1"></i>View
-                                Report</a>
+                            <a href="<?= BASE_URL ?>/advisor/student_profile.php?id=<?= $st['id'] ?>"
+                                class="btn btn-sm btn-outline-primary w-100"><i class="fas fa-user me-1"></i>View
+                                Profile</a>
                         </div>
                     </div>
                 </div>

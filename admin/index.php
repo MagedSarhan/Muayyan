@@ -5,7 +5,7 @@ require_once __DIR__ . '/../includes/functions.php';
 requireRole('admin');
 
 $db = getDBConnection();
-$pageTitle = 'Admin Dashboard';
+$pageTitle = 'Home';
 
 // Stats
 $totalUsers = $db->query("SELECT COUNT(*) FROM users")->fetchColumn();

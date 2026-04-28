@@ -517,4 +517,32 @@ INSERT INTO `activity_log` (`user_id`, `action`, `description`, `ip_address`, `c
 (5, 'note_add', 'Added academic note for Omar Al-Ghamdi', '127.0.0.1', '2026-03-20 11:30:00'),
 (1, 'user_create', 'Created new student account: STU005', '127.0.0.1', '2026-03-01 09:00:00');
 
+-- =====================================================
+-- TABLE: student_excuses
+-- =====================================================
+CREATE TABLE `student_excuses` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `student_id` INT NOT NULL,
+  `excuse_type` ENUM('health','financial','family','personal','other') NOT NULL,
+  `description` TEXT DEFAULT NULL,
+  `start_date` DATE NOT NULL,
+  `end_date` DATE NOT NULL,
+  `course_id` INT DEFAULT NULL COMMENT 'NULL means all courses',
+  `status` ENUM('pending','approved','rejected') NOT NULL DEFAULT 'pending',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (`student_id`) REFERENCES `users`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`course_id`) REFERENCES `courses`(`id`) ON DELETE SET NULL,
+  INDEX `idx_student` (`student_id`),
+  INDEX `idx_status` (`status`)
+) ENGINE=InnoDB;
+
+-- Student Excuses Demo Data
+INSERT INTO `student_excuses` (`student_id`, `excuse_type`, `description`, `start_date`, `end_date`, `course_id`, `status`, `created_at`) VALUES
+(8, 'health', 'Was admitted to the hospital due to appendicitis surgery. Medical report attached.', '2026-03-10', '2026-03-17', NULL, 'approved', '2026-03-10 08:00:00'),
+(8, 'personal', 'Family emergency requiring travel to another city.', '2026-03-25', '2026-03-27', 3, 'pending', '2026-03-24 14:00:00'),
+(6, 'health', 'Severe flu symptoms, doctor recommended rest for 3 days.', '2026-03-20', '2026-03-22', NULL, 'approved', '2026-03-20 09:30:00'),
+(9, 'family', 'Attending a close family member wedding ceremony.', '2026-04-01', '2026-04-02', NULL, 'approved', '2026-03-28 10:00:00'),
+(10, 'financial', 'Unable to attend due to financial difficulties with transportation.', '2026-03-18', '2026-03-19', 2, 'rejected', '2026-03-17 16:00:00'),
+(7, 'health', 'Dental surgery appointment that cannot be rescheduled.', '2026-04-05', '2026-04-05', 1, 'pending', '2026-04-03 11:00:00');
+
 COMMIT;

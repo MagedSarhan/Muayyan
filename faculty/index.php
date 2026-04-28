@@ -4,7 +4,7 @@ require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireRole('faculty');
 $db = getDBConnection();
-$pageTitle = 'Faculty Dashboard';
+$pageTitle = 'Home';
 $fid = $_SESSION['user_id'];
 
 $mySections = $db->query("SELECT COUNT(*) FROM sections WHERE faculty_id = $fid AND status='active'")->fetchColumn();
