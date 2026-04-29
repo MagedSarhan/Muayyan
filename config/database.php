@@ -10,6 +10,7 @@
 // define('DB_PASS', '');
 // define('DB_CHARSET', 'utf8mb4');
 
+
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'u198070152_Muayyan');
 define('DB_USER', 'u198070152_Muayyan');
