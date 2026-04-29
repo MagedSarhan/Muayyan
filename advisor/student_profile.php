@@ -98,7 +98,8 @@ include __DIR__ . '/../includes/topbar.php';
                             <div class="risk-info text-center mt-2">
                                 <h5 style="font-size:.9rem"><?= $badge['label'] ?></h5>
                                 <p style="font-size:.75rem">Avg: <?= $risk['avg_grade'] ?>% |
-                                    <?= ucfirst($risk['trend']) ?></p>
+                                    <?= ucfirst($risk['trend']) ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -119,7 +120,7 @@ include __DIR__ . '/../includes/topbar.php';
         </div>
 
         <!-- Tabs Navigation -->
-        <ul class="nav nav-tabs mb-4" id="profileTabs" role="tablist">
+        <ul class="nav nav-tabs mb-4 ttt" id="profileTabs" role="tablist">
             <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#tab-grades"><i
                         class="fas fa-star me-1"></i>Grades</a></li>
             <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-alerts"><i
@@ -135,7 +136,11 @@ include __DIR__ . '/../includes/topbar.php';
             <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-upcoming"><i
                         class="fas fa-calendar me-1"></i>Upcoming</a></li>
         </ul>
-
+        <style>
+            .ttt .nav-link {
+                color: #000 !important;
+            }
+        </style>
         <div class="tab-content">
             <!-- Grades Tab -->
             <div class="tab-pane fade show active" id="tab-grades">
@@ -172,7 +177,7 @@ include __DIR__ . '/../includes/topbar.php';
                                                 </td>
                                                 <td><?= formatDate($g['due_date']) ?></td>
                                             </tr>
-                                    <?php endforeach;
+                                        <?php endforeach;
                                     endforeach; ?>
                                 </tbody>
                             </table>
@@ -198,8 +203,7 @@ include __DIR__ . '/../includes/topbar.php';
             <!-- Alerts Tab -->
             <div class="tab-pane fade" id="tab-alerts">
                 <?php if (empty($alerts)): ?>
-                    <div class="text-center p-5"><i class="fas fa-check-circle text-success"
-                            style="font-size:2.5rem"></i>
+                    <div class="text-center p-5"><i class="fas fa-check-circle text-success" style="font-size:2.5rem"></i>
                         <p class="text-success mt-2 fw-semibold">No academic alerts for this student</p>
                     </div>
                 <?php else: ?>
@@ -223,7 +227,8 @@ include __DIR__ . '/../includes/topbar.php';
                             </div>
                             <div class="alert-message mb-1"><?= e($al['message']) ?></div>
                             <div class="alert-time"><i class="fas fa-clock me-1"></i><?= timeAgo($al['created_at']) ?>
-                                — <span class="badge bg-light text-dark"><?= ucfirst(str_replace('_', ' ', $al['alert_type'])) ?></span>
+                                — <span
+                                    class="badge bg-light text-dark"><?= ucfirst(str_replace('_', ' ', $al['alert_type'])) ?></span>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -247,8 +252,7 @@ include __DIR__ . '/../includes/topbar.php';
                                     <small class="text-muted"><?= timeAgo($note['created_at']) ?></small>
                                 </div>
                                 <p class="mb-1" style="font-size:.88rem"><?= e($note['content']) ?></p>
-                                <small class="text-muted"><i
-                                        class="fas fa-user me-1"></i><?= e($note['author_name']) ?>
+                                <small class="text-muted"><i class="fas fa-user me-1"></i><?= e($note['author_name']) ?>
                                     <?= $note['is_private'] ? '<span class="badge bg-dark ms-1"><i class="fas fa-lock me-1"></i>Private</span>' : '' ?>
                                 </small>
                             </div>
@@ -281,8 +285,8 @@ include __DIR__ . '/../includes/topbar.php';
                                             <span class="badge bg-danger ms-1">Urgent</span>
                                         <?php endif; ?>
                                     </small>
-                                    <small class="text-muted"><i
-                                            class="fas fa-reply me-1"></i><?= $req['reply_count'] ?> replies</small>
+                                    <small class="text-muted"><i class="fas fa-reply me-1"></i><?= $req['reply_count'] ?>
+                                        replies</small>
                                 </div>
                             </div>
                         </div>
@@ -293,8 +297,7 @@ include __DIR__ . '/../includes/topbar.php';
             <!-- Excuses Tab -->
             <div class="tab-pane fade" id="tab-excuses">
                 <?php if (empty($excuses)): ?>
-                    <div class="text-center p-5"><i class="fas fa-file-medical text-muted"
-                            style="font-size:2.5rem"></i>
+                    <div class="text-center p-5"><i class="fas fa-file-medical text-muted" style="font-size:2.5rem"></i>
                         <p class="text-muted mt-2">No excuses submitted by this student</p>
                     </div>
                 <?php else: ?>
@@ -338,13 +341,12 @@ include __DIR__ . '/../includes/topbar.php';
             <!-- Upcoming Tab -->
             <div class="tab-pane fade" id="tab-upcoming">
                 <?php if (empty($upcoming)): ?>
-                    <div class="text-center p-5"><i class="fas fa-calendar-check text-success"
-                            style="font-size:2.5rem"></i>
+                    <div class="text-center p-5"><i class="fas fa-calendar-check text-success" style="font-size:2.5rem"></i>
                         <p class="text-success mt-2 fw-semibold">No upcoming assessments</p>
                     </div>
                 <?php else: ?>
                     <?php foreach ($upcoming as $ua):
-                        $daysLeft = max(0, (int)(( strtotime($ua['due_date']) - time()) / (60 * 60 * 24))); ?>
+                        $daysLeft = max(0, (int) ((strtotime($ua['due_date']) - time()) / (60 * 60 * 24))); ?>
                         <div class="timeline-item">
                             <div
                                 class="timeline-icon <?= $daysLeft <= 3 ? 'danger' : ($daysLeft <= 7 ? 'warning' : 'primary') ?>">
@@ -353,7 +355,8 @@ include __DIR__ . '/../includes/topbar.php';
                             <div class="timeline-content">
                                 <h6><?= e($ua['title']) ?></h6>
                                 <p><?= e($ua['code']) ?> &bull; <?= $ua['max_score'] ?> pts</p>
-                                <span class="time"><i class="fas fa-clock me-1"></i><?= $daysLeft ?> day<?= $daysLeft !== 1 ? 's' : '' ?> left
+                                <span class="time"><i class="fas fa-clock me-1"></i><?= $daysLeft ?>
+                                    day<?= $daysLeft !== 1 ? 's' : '' ?> left
                                     — <?= formatDate($ua['due_date']) ?></span>
                             </div>
                         </div>
@@ -371,10 +374,12 @@ include __DIR__ . '/../includes/topbar.php';
             new Chart(perfCtx, {
                 type: 'radar',
                 data: {
-                    labels: [<?php foreach ($courses as $c) echo "'$c[code]',"; ?>],
+                    labels: [<?php foreach ($courses as $c)
+                        echo "'$c[code]',"; ?>],
                     datasets: [{
                         label: 'Avg %',
-                        data: [<?php foreach ($courses as $c) echo "$c[avg],"; ?>],
+                        data: [<?php foreach ($courses as $c)
+                            echo "$c[avg],"; ?>],
                         backgroundColor: 'rgba(30,111,160,0.12)',
                         borderColor: '#1e6fa0',
                         pointBackgroundColor: '#1e6fa0',
